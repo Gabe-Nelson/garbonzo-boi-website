@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=UnifrakturMaguntia&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img\decor\emojis\frog.gif">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img class="header-img" src="img\header.png" alt="Root Beer the Cat" width=465px height=493px>
+            <br>
+            <img id="danceimg" src="img/decor/staticDK.png" alt="DK">
+            <span class="site-name">Garbonzo Boi</span>
+            <img id="cdimg" src="img/decor/staticcd.png" alt="CD">
+            <audio id="myaudio" loop>
+                <source src="audio\DANCE.mp3">
+            </audio>
+        </header>
+        <nav>
+            <a href="/home.html" target="maincontainer">Home</a>
+            <a href="/recipes.html" target="maincontainer">Recipes</a>
+        </nav>
+        <div class="content-box">
+            <iframe src="/home.html" name="maincontainer" style="width:100%;height:460px;border:0px;min-height:380px;"></iframe>
+        </div>
+        <footer>
+            <img src="img\decor\Party.gif" alt="Party">
+            <p>𓆩❤︎𓆪 Made by Gabe 𓆩❤︎𓆪</p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const audio = document.getElementById('myaudio');
+                audio.volume = 0.4;  //Set volume to 50%
+        const playPauseImage = document.getElementById('cdimg');
+        const danceImage = document.getElementById('danceimg');
+        
+        playPauseImage.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                playPauseImage.src = 'img/decor/spinningcd.gif';
+                danceImage.src = 'img/decor/DK.gif';
+            } 
+            else{
+                audio.pause();
+                playPauseImage.src = 'img/decor/staticcd.png';
+                danceImage.src = 'img/decor/staticDK.png'}     
+            
+            });
+        });  
+    </script>
+</body>
+</html>
