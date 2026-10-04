@@ -10,6 +10,16 @@ body {
   font-size: 15px;
 }
 
+.back-button {
+    vertical-align: middle;
+    font-size: 1.1em;
+}
+
+.back-button a, .back-button a:visited{
+    text-decoration: none;
+    color: #414833;
+}
+
 main {
   width: 800px;
   margin: auto;
