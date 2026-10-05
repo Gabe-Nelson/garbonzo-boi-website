@@ -1,0 +1,79 @@
+:root {
+  --pricolor: #B0BA99;
+  --secolor: #4E220F;
+  --bgcolor: #F7F1DE;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+  background: #d9d9d9 url("background.jpg") repeat fixed center;
+  color: black;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.back-button {
+    vertical-align: middle;
+    font-size: 1.1em;
+}
+
+.back-button a, .back-button a:visited{
+    text-decoration: none;
+    color: #414833;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1, h2 {
+  color: var(--secolor);
+  text-align: center;
+  width: auto;
+}
+
+h3 {
+  color: var(--secolor);
+}
+
+.box {
+  border: 2px solid var(--pricolor);
+  border-radius: 10px;
+  background-color: var(--bgcolor);
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: -5px 5px var(--pricolor);
+  width: 100%;
+}
+
+.box img {
+    display: block;
+    margin: auto;
+}
+
+.box iframe {
+  display: block;
+  margin: auto;
+}
+
+a {
+    color: var(--pricolor)
+}
+
+a:visited {
+    color: var(--secolor)
+}
+
+.box a {
+  text-align: center;
+  width: auto;
+  display: flex;
+}
