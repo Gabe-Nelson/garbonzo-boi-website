@@ -20,48 +20,43 @@
                 </ul>
             </div>
         </section>
-        <div class="recipes">
-            <h1 id="buffdip">Buffalo Dip</h1>
-            <h2>Ingredients</h2>
-            <ul>
-                <li>2 can chickpeas, mash half of them with fork</li>
-                <li>8oz cream cheese</li>
-                <li>1 c. ranch</li>
-                <li>2/3 c. Frank's Red hot</li>
-                <li>garlic & onion powder, salt, and pepper</li>
-                <li>2 c. shredded cheese; half mixed in, half for garnish</li>
-                <li>1/2 c. green onion; garnish</li>
-            </ul>
-            <h2>Method</h2>
-            <ol>
-                <li>Preheat oven to 350F</li>
-                <li>Mix all non garnish items together</li>
-                <li>Bake until bubbly, 20-25 min</li>
-            </ol>
-            <img src="img\decor\emojis\carrot.gif">
-            <h1 id="chili">Slow Cooker Chili</h1>
-            <h2>Ingredients</h2>
-            <ul>
-                <li>1/2 red onion, diced</li>
-                <li>1 bell pepper, diced</li>
-                <li>2 carronts, diced</li>
-                <li>2 celery, diced</li>
-                <li>28 oz diced tomatos with juice</li>
-                <li>2 can blank beans, rinsed</li>
-                <li>1 can pinto beans, rinsed</li>
-                <li>2 chipoltes, minced + 2 T adobo sauce</li>
-                <li>1 can corn, drained</li>
-                <li>3 cloves garlic, minced</li>
-                <li>chili powder, cumin, paprika, salt, pepper</li>
-                <li>adjust to desired consistency with veggie stock, ~2 c.</li>
-                <li>lime juice, finish - after cooking</li>
-            </ul>
-            <h2>Method</h2>
-            <ol>
-                <li>Cook in slow cooker on high for 4-5h or on low for 6-7h</li>
-            </ol>
-            <img src="img\decor\emojis\carrot.gif">
-        </div>
+        <div class="recipes" id="recipe-container"></div>
     </div>
+    <script>
+        function parseRecipes(recipes) {
+            const box = document.getElementById("recipe-container");
+
+            for (let r of recipes) {
+                box.innerHTML += "<h1 id=" + r.id+">"+r.title+"</h1>";
+                
+                box.innerHTML += "<h2>Ingredients</h2>";
+                let listElement = document.createElement('ul');
+                let listItem = document.createElement('li');
+                box.appendChild(listElement);
+                for (let i of r.ingredients) {
+                    listItem.textContent = i;
+                    listElement.appendChild(listItem);
+                    listItem = document.createElement('li');
+                };
+
+                box.innerHTML += "<h2>Method</h2>";
+                listElement = document.createElement('ol');
+                listItem = document.createElement('li');
+                box.appendChild(listElement);
+                for (let i of r.methods) {
+                    listItem.textContent = i;
+                    listElement.appendChild(listItem);
+                    listItem = document.createElement('li');
+                };
+                box.innerHTML += "<img src=\"img/decor/emojis/carrot.gif\">";
+            }
+        };
+        async function loadJSON() {
+            const response = await fetch("recipes.json");
+            const recipes = await response.json();
+            parseRecipes(recipes);
+        };
+        loadJSON();
+    </script>
 </body>
 </html>

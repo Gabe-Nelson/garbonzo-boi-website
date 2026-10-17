@@ -1,0 +1,14 @@
+[
+{
+    "id": "buffdip",
+    "title": "Buffalo Dip",
+    "ingredients" : ["2 can chickpeas, mash half of them with fork", "8oz cream cheese", "1 c. ranch", "2/3 c. Frank's Red hot", "garlic & onion powder, salt, and pepper", "2 c. shredded cheese; half mixed in, half for garnish", "1/2 c. green onion; garnish"],
+    "methods": ["Preheat oven to 350F","Mix all non garnish items together","Bake until bubbly, 20-25 min"]
+},
+{
+    "id": "chili",
+    "title": "Slow Cooker Chili",
+    "ingredients" : ["1/2 red onion, diced","1 bell pepper, diced","2 carronts, diced","2 celery, diced","28 oz diced tomatos with juice","2 can blank beans, rinsed","1 can pinto beans, rinsed","2 chipoltes, minced + 2 T adobo sauce","1 can corn, drained","3 cloves garlic, minced","chili powder, cumin, paprika, salt, pepper","adjust to desired consistency with veggie stock, ~2 c.","lime juice, finish - after cooking"],
+    "methods" : ["Cook in slow cooker on high for 4-5h or on low for 6-7h"]
+}
+]
